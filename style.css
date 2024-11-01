@@ -4,6 +4,14 @@
     padding: 0;
     margin: 0;
 }
+/* 導覽列 */
+
+nav {
+    /* 定位:固定 */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
 
 #nav {
     display: grid;
@@ -11,8 +19,6 @@
     width: 800px;
     /* background: #333; */
     margin: 35px auto;
-    /* 定位:固定 */
-    position: fixed;
 }
 
 #link {
@@ -34,10 +40,11 @@ a:hover {
     color: #F5BB23;
 }
 
+/* 橫幅 */
 #banner {
     background-image: url(./img/banner.jpg);
     width: 100%;
-    height: 1280px;
+    height: 100vh;
 }
 /* 內容區域 */
 .content {
@@ -126,9 +133,10 @@ h1 {
 }
 
 #product {
-    width: 100%;
+    height: 500px;
+    width: 800px;
     margin: 0 auto;
-    border-color: #333;
+    /* background-color: #333; */
     /* 文字對齊:置中 (對行內元素調整對齊) */
     text-align: center;
     position: relative;
@@ -136,8 +144,72 @@ h1 {
 
 #info {
     position: absolute;
+    top: 60px;
+    right: 50px;
+}
+
+/* 取得 #info 內的所有 h2 */
+#info h2 {
+    color: gold;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+}
+
+#info h6 {
+    color: #666;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#info p {
+    text-align-last: left;
+    line-height: 2;
+}
+
+/* 經營理念 */
+#idea {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+    width: 800px;
+    margin: o auto;
+}
+
+#idea-pic img {
+    width: 100%;
+    border: 8px solid #fff;
+}
+
+#idea-content {
+    line-height: 3;
+    letter-spacing: 10px;
+}
+
+#idea-content a {
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+#idea-content a:hover {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    background-image: url(./img/paper.png);
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #555;
+
 
 }
+
 
 
 
