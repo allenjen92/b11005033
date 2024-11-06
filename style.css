@@ -4,6 +4,11 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    background-image: url(./img/paper.png);
+}
+
 /* 導覽列 */
 
 nav {
@@ -43,13 +48,11 @@ a:hover {
 /* 橫幅 */
 #banner {
     background-image: url(./img/banner.jpg);
+    background-size: cover;        /* 適應螢幕大小 */
+    background-position: center;   /* 圖片置中 */
+    background-repeat: no-repeat; 
     width: 100%;
     height: 100vh;
-}
-/* 內容區域 */
-.content {
-    border-image: url(./img/paper.png);
-    /* height: 600px; */
 }
 
 h1 {
@@ -65,7 +68,7 @@ h1 {
     display: grid;
     /* 格線模板欄位:重複設定(重複幾次，單位) */
     /* 1fr 一格 */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     /* gg20 格線間距 */
     grid-gap: 20px;
     width: 1200px;
@@ -89,7 +92,7 @@ h1 {
     /* 物件適應:封面(避免圖片壓縮) */
     object-fit: cover;
     /* 物件位置:左右 上下 */
-    object-position: 2px -130px;
+    object-position: 2px -10px;
 }
 
 .card h2 {
@@ -142,6 +145,27 @@ h1 {
     position: relative;
 }
 
+#product img {
+    width: 100%;
+    max-width: 400px; /* 依據需求調整最大寬度 */
+    height: auto;     /* 維持圖片比例 */
+    margin: 0 auto;
+    display: block;
+}
+
+#product {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
 #info {
     position: absolute;
     top: 60px;
@@ -172,7 +196,7 @@ h1 {
     grid-template-columns: 50% 50%;
     grid-gap: 30px;
     width: 800px;
-    margin: o auto;
+    margin: 0 auto;
 }
 
 #idea-pic img {
@@ -182,7 +206,7 @@ h1 {
 
 #idea-content {
     line-height: 3;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 #idea-content a {
